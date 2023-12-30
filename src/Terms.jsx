@@ -10,7 +10,7 @@ const Terms = () => {
         <div className="w-full h-64">
           <img
             className="w-full h-full object-cover"
-            src="media/header.jpeg"
+            src="media/header.webp"
             alt="terms of service header"
           />
         </div>

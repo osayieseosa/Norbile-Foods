@@ -10,7 +10,7 @@ const About = () => {
       <div className="w-full h-64">
         <img
           className="w-full h-full object-cover"
-          src="media/about.jpeg"
+          src="media/about.webp"
           alt=""
         />
       </div>
