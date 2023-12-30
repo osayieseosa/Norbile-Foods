@@ -148,7 +148,7 @@ const Home = () => {
             </h1>
           </div>
         </div>
-        <div className="w-full bg-[url('./images/contact.jpg')] bg-no-repeat h-max bg-cover">
+        <div className="w-full bg-[url('./images/contact.webp')] bg-no-repeat h-max bg-cover">
           <form
             className="w-full px-10 py-32 sm:max-w-2xl sm:m-[0_auto] text-white"
             onSubmit={sendEmail}
