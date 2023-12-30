@@ -12,6 +12,8 @@ const Menu = ({ menu, setMenu }) => {
     { name: "CONTACT US", to: "https://wa.link/q0hzrb" },
     { name: "TEL", to: "tel:08056765391" },
     { name: "ABOUT", to: "/about" },
+    { name: "Login", to: "/login" },
+    { name: "Sign Up", to: "/signup" },
   ];
   if (auth?.roles?.find((item) => item === "2006")) {
     links.push({ name: "ADMIN PAGE", to: "/adminPage" });
