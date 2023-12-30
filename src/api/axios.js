@@ -1,5 +1,5 @@
 import axios from 'axios'
-const BASE_URL = 'https://Norbilefoodsapi.vercel.app'
+const BASE_URL = 'https://norbilefoodsapi.vercel.app'
 
 export default axios.create({
     baseURL: BASE_URL
