@@ -33,6 +33,7 @@ const CheckOutPage = () => {
     } else if (!location?.length) {
       navigate("/question");
     }
+    setTotal(Number(charges) + deliveryPrice + subTotal);
   }, [cart, charges, lga, subTotal]);
   const handlePayment = () => {
     const paystack = new PaystackPop();
@@ -149,7 +150,7 @@ const CheckOutPage = () => {
               </div>
               <div className="flex justify-between">
                 <div>Total:</div>
-                <div>&#8358;{Number(charges) + deliveryPrice + subTotal}</div>
+                <div>&#8358;total</div>
               </div>
             </>
           )}
