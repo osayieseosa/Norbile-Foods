@@ -62,7 +62,7 @@ const EcommerceHeader = () => {
         <div
           ref={headerRef}
           className={`${
-            fixed ? "fixed" : ""
+            fixed && !menu ? "fixed" : ""
           } bg-neutral-950 w-full duration-150 z-30`}
         >
           <div className="lg:max-w-4xl lg:m-[0_auto] px-4 h-min py-7 space-y-8">

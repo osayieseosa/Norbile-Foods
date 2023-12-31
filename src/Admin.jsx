@@ -158,7 +158,7 @@ const AdminPage = () => {
                 className="min-w bg-blue-400 text-slate-200 text-xs font-bold h-min py-1 px-3 rounded-md hover:scale-95 cursor-pointer self-end"
                 onClick={handleUpdatePrices}
               >
-                Done
+                UPDATE
               </div>
             </div>
             <div className="mt-5 flex gap-5">
@@ -177,7 +177,7 @@ const AdminPage = () => {
                 className="min-w bg-blue-400 text-slate-200 text-xs font-bold h-min py-1 px-3 rounded-md hover:scale-95 cursor-pointer self-end"
                 onClick={handleUpdatePrices}
               >
-                Done
+                UPDATE
               </div>
             </div>
             <div className="mt-5 flex gap-5">
@@ -187,7 +187,7 @@ const AdminPage = () => {
               <input
                 type="text"
                 className="border-b-2 border-neutral-500 w-32 outline-none bg-inherit text-neutral-500 text-sm p-1"
-                value={delivery.ikhpoba}
+                value={delivery.egor}
                 onChange={(e) =>
                   setDelivery({ ...delivery, ikhpoba: e.target.value })
                 }
@@ -196,7 +196,7 @@ const AdminPage = () => {
                 className="min-w bg-blue-400 text-slate-200 text-xs font-bold h-min py-1 px-3 rounded-md hover:scale-95 cursor-pointer self-end"
                 onClick={handleUpdatePrices}
               >
-                Done
+                UPDATE
               </div>
             </div>
             <div className="mt-5 flex gap-5">
@@ -215,7 +215,7 @@ const AdminPage = () => {
                 className="min-w bg-blue-400 text-slate-200 text-xs font-bold h-min py-1 px-3 rounded-md hover:scale-95 cursor-pointer self-end"
                 onClick={handleUpdatePrices}
               >
-                Done
+                UPDATE
               </div>
             </div>
             <div className="mt-5 flex gap-5">
@@ -225,7 +225,7 @@ const AdminPage = () => {
               <input
                 type="text"
                 className="border-b-2 border-neutral-500 w-32 outline-none bg-inherit text-neutral-500 text-sm p-1"
-                value={delivery.ikhpoba}
+                value={delivery.ikpoba}
                 onChange={(e) =>
                   setDelivery({ ...delivery, ikhpoba: e.target.value })
                 }
@@ -234,7 +234,7 @@ const AdminPage = () => {
                 className="min-w bg-blue-400 text-slate-200 text-xs font-bold h-min py-1 px-3 rounded-md hover:scale-95 cursor-pointer self-end"
                 onClick={handleUpdatePrices}
               >
-                Done
+                UPDATE
               </div>
             </div>
           </div>
@@ -282,7 +282,7 @@ const AdminPage = () => {
                 {orders.length ? (
                   orders.map((item, i) => {
                     return (
-                      <tr className="bg-white border-b">
+                      <tr className="bg-white border-b" key={i}>
                         <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                           {++i}
                         </td>
@@ -329,9 +329,11 @@ const AdminPage = () => {
                     );
                   })
                 ) : (
-                  <div className="whitespace-nowrap py-2 px-4 font-bold">
-                    {`No More Orders to display, sorry ${auth?.name}`}
-                  </div>
+                  <tr>
+                    <td className="whitespace-nowrap py-2 px-4 font-bold">
+                      {`No More Orders to display, sorry ${auth?.name}`}
+                    </td>
+                  </tr>
                 )}
               </tbody>
             </table>

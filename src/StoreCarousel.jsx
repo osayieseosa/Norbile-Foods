@@ -11,7 +11,7 @@ const StoreCarousel = () => {
     setWidth(
       shopCarousel.current.scrollWidth - shopCarousel.current.offsetWidth
     );
-  }, []);
+  }, [items]);
   return (
     <motion.div
       drag={"x"}

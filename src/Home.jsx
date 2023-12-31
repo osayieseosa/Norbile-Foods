@@ -8,13 +8,13 @@ import emailjs from "emailjs-com";
 import AppContext from "./context/AppProvider";
 import Footer from "./Footer";
 import { Link, useNavigate } from "react-router-dom";
+
 const Home = () => {
   const navigate = useNavigate();
   const heroRef = useRef();
   const form = useRef();
   const [fixed, setFixed] = useState(false);
-  const { menu, setMenu, scrollPosition, loadFoodItems } =
-    useContext(AppContext);
+  const { menu, setMenu, scrollPosition, items } = useContext(AppContext);
   useEffect(() => {
     if (scrollPosition < heroRef.current.scrollHeight) {
       setFixed(false);
@@ -46,7 +46,7 @@ const Home = () => {
     <div className="w-full min-h-screen relative">
       <div
         ref={heroRef}
-        className="w-full h-min relative flex overflow-hidden pb-10"
+        className="w-full h-min relative flex overflow-hidden pb-10 bg-neutral-700"
       >
         <div className="z-20 relative w-full space-y-4">
           <div

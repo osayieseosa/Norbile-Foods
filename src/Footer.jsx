@@ -25,7 +25,7 @@ const Footer = () => {
           />
         </div>
         <div>
-          <ul className="text-center text-xs font-semibold text-neutral-200">
+          <ul className="text-center text-xs font-semibold text-neutral-200 mb-5">
             {links.map((item) => {
               return (
                 <Link to={item.to} key={item.name}>
@@ -34,9 +34,12 @@ const Footer = () => {
               );
             })}
           </ul>
-          <div className="bg-gray-300 text-neutral-800 px-5 py-2 mt-5 text-sm h-min cursor-pointer rounded-lg font-semibold hover:scale-95">
+          <Link
+            to="https://wa.link/q0hzrb"
+            className="bg-gray-300 text-neutral-800 px-5 py-2 text-sm h-min cursor-pointer rounded-lg font-semibold hover:scale-95"
+          >
             CONTACT US
-          </div>
+          </Link>
         </div>
       </div>
       <div className="border-t-2 border-neutral-300 py-4 text-neutral-200 w-full flex justify-between px-5 sm:max-w-2xl sm:m-[0_auto] gap-5 text-[8px] sm:text-[14px]">

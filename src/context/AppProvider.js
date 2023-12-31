@@ -19,12 +19,12 @@ export const AppProvider = ({children}) => {
   const [charges, setCharges] = useState();
   const [delivery, setDelivery] = useState({});
   const [id, setId] = useState('')
-  // const delivery = [
-  //   { location: "oredo", price: "1000" },
-  //   { location: "egor", price: "2000" },
-  //   { location: "ikpoba-okha", price: "2500" },
-  //   { location: "ovia north east", price: "1500" },
-  // ];
+  const lga = [
+    { location: "oredo", price: "1000" },
+    { location: "egor", price: "2000" },
+    { location: "ikpoba-okha", price: "2500" },
+    { location: "ovia north east", price: "1500" },
+  ];
   const loadFoodItems = async () => {
     try {
       const response = await axios.get("/food");
@@ -75,7 +75,7 @@ export const AppProvider = ({children}) => {
     }
 }
     return (
-        <AppContext.Provider value={{menu, setMenu, scrollPosition, fixed, setFixed, cart, setCart, addToCart, removeFromCart,headerHeight, setHeaderHeight,location, setLocation,delivery, address, setAddress,tel, setTel,items, setItems, loadFoodItems, editFood, setEditFood, prices, setPrices,setDelivery,charges, setCharges, loadPrices,id}}>
+        <AppContext.Provider value={{menu, setMenu, scrollPosition, fixed, setFixed, cart, setCart, addToCart, removeFromCart,headerHeight, setHeaderHeight,location, setLocation,delivery, address, setAddress,tel, setTel,items, setItems, loadFoodItems, editFood, setEditFood, prices, setPrices,setDelivery,charges, setCharges, loadPrices,id,lga}}>
             {children}
         </AppContext.Provider>
     )

@@ -1,6 +1,8 @@
 import axios from 'axios'
 const BASE_URL = 'https://norbilefoodsapi.onrender.com'
 
+// http://localhost:3500
+
 export default axios.create({
     baseURL: BASE_URL
 })

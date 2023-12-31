@@ -11,7 +11,7 @@ import axios from "./api/axios";
 
 const CheckOutPage = () => {
   const navigate = useNavigate();
-  const { cart, setCart, location, delivery, orders, setOrders, address, tel } =
+  const { cart, setCart, location, lga, address, tel, charges } =
     useContext(AppContext);
   const [date, setDate] = useState(new Date());
   const { auth } = useAuth();
@@ -22,10 +22,9 @@ const CheckOutPage = () => {
       .map((item) => item.price * item.quantity)
       .reduce((partialSum, a) => partialSum + a, 0)
   );
-  const [charges, setCharges] = useState(50);
   const [total, setTotal] = useState(0);
   const deliveryPrice = Number(
-    delivery.find((item) => item.location.includes(location)).price
+    lga.find((item) => item.location.includes(location)).price
   );
 
   useEffect(() => {
@@ -34,8 +33,7 @@ const CheckOutPage = () => {
     } else if (!location?.length) {
       navigate("/question");
     }
-    setTotal(subTotal + deliveryPrice + charges);
-  }, [cart, charges, delivery, subTotal]);
+  }, [cart, charges, lga, subTotal]);
   const handlePayment = () => {
     const paystack = new PaystackPop();
     paystack.newTransaction({
@@ -55,7 +53,7 @@ const CheckOutPage = () => {
             location: address,
             phone: tel,
             lga:
-              delivery
+              lga
                 .find((item) => item.location === location)
                 .location.toUpperCase() + " LGA",
             status: "unfulfilled",
@@ -142,14 +140,20 @@ const CheckOutPage = () => {
             </div>
           </div>
           <div className="flex justify-between">
-            <div>Delivery</div> <div>&#8358; {deliveryPrice}</div>
+            <div>Delivery</div> <div>&#8358;{deliveryPrice}</div>
           </div>
-          <div className="flex justify-between">
-            <div>Charges</div> <div>&#8358;50</div>
-          </div>
-          <div className="flex justify-between">
-            <div>Total:</div> <div>&#8358;{total}</div>
-          </div>
+          {charges && (
+            <>
+              <div className="flex justify-between">
+                <div>Charges</div> <div>&#8358;50</div>
+              </div>
+              <div className="flex justify-between">
+                <div>Total:</div>
+                <div>&#8358;{Number(charges) + deliveryPrice + subTotal}</div>
+              </div>
+            </>
+          )}
+
           <div
             className="text-slate-200 w-min"
             onClick={() => {

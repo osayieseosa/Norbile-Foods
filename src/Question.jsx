@@ -6,7 +6,7 @@ import AppContext from "./context/AppProvider";
 
 const Question = () => {
   const navigate = useNavigate();
-  const { setLocation, location, delivery } = useContext(AppContext);
+  const { setLocation, location, lga } = useContext(AppContext);
   return (
     <div>
       <EcommerceHeader />
@@ -30,10 +30,12 @@ const Question = () => {
               }}
               className="focus:outline-none border-b-2 border-neutral-500 p-2 text-neutral-500 text-sm font-bold cursor-pointer"
             >
-              <option value={location}>{location.toUpperCase()} LGA</option>
-              {delivery.map((item) => {
+              <option value={location}>
+                {location ? location.toUpperCase() + "LGA" : ""}
+              </option>
+              {lga.map((item) => {
                 return (
-                  <option value={item.location} key={item.name}>
+                  <option value={item.location} key={item.location}>
                     {item.location.toUpperCase()} LGA
                   </option>
                 );
