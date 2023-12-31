@@ -135,7 +135,7 @@ const Home = () => {
           <p className="text-5xl font-extrabold mt-2 mb-6 text-slate-300">
             Lets Talk
           </p>
-          <Link to="/about" className="w-min">
+          <Link to="https://wa.link/q0hzrb" className="w-min">
             <Button content="contact us" size="text-xs" />
           </Link>
         </div>
