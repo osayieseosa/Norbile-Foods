@@ -22,7 +22,7 @@ const Menu = ({ menu, setMenu }) => {
     <div
       className={`${
         width >= 768 ? "w-full" : menu ? "w-full" : "w-0"
-      } duration-500 min-h-full py-7 space-y-24 absolute overscroll-contain overflow-x-hidden z-50 bg-[#000] top-0 md:relative left-0 md:w-max md:py-0 md:h-min md:space-y-0 md:grid md:place-content-center md:bg-transparent`}
+      } duration-500 py-7 space-y-24 min-h-screen fixed overscroll-contain overflow-x-hidden z-50 bg-[#000] top-0 md:relative left-0 md:w-max md:py-0 md:h-min md:space-y-0 md:grid md:place-content-center md:bg-transparent`}
     >
       <div
         className="text-yellow-300 relative w-full text-7xl  flex justify-end px-5 md:hidden h-min"
@@ -44,14 +44,14 @@ const Menu = ({ menu, setMenu }) => {
             );
           })}
           <li>
-            <div className="flex gap-3 items-center justify-between">
+            <div className="flex gap-3 items-center justify-between md:mr-2">
               INFO{" "}
               <div onClick={() => setInfo((prevState) => !prevState)}>
                 {info ? <FaCaretUp /> : <FaCaretDown />}
               </div>
             </div>
             {info && (
-              <ul className="space-y-5 pt-10 text-2xl ml-5">
+              <ul className="md:absolute space-y-5 pt-10 text-2xl ml-5">
                 <li>
                   <Link to="https://wa.link/q0hzrb">Contact us</Link>
                 </li>
@@ -69,7 +69,7 @@ const Menu = ({ menu, setMenu }) => {
               </div>
             </div>
             {join && (
-              <ul className="space-y-5 pt-10 text-2xl ml-5">
+              <ul className="md:absolute space-y-5 pt-10 text-2xl ml-5">
                 <li>
                   <Link to="/login">Login</Link>
                 </li>
