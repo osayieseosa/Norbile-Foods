@@ -138,6 +138,9 @@ const SignIn = () => {
             Sign Up
           </Link>
         </p>
+        <Link to="/" className="text-xs font-light underline text-blue-800">
+          Go Home
+        </Link>
       </div>
     </div>
   );
