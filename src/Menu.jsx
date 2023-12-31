@@ -64,12 +64,9 @@ const Menu = ({ menu, setMenu }) => {
           <li className="relative md:px-3 cursor-pointer border-b-4 border-transparent after:left-0 after:w-0 after:bg-white after:h-1 after:absolute after:top-full hover:after:w-full after:duration-500 md:mx-2">
             <div
               className="flex gap-3 items-center justify-between"
-              onClick={() => setInfo((prevState) => !prevState)}
+              onClick={() => setJoin((prevState) => !prevState)}
             >
-              JOIN US{" "}
-              <div onClick={() => setJoin((prevState) => !prevState)}>
-                {join ? <FaCaretUp /> : <FaCaretDown />}
-              </div>
+              JOIN US <div>{join ? <FaCaretUp /> : <FaCaretDown />}</div>
             </div>
             {join && (
               <ul className="md:absolute md:text-base space-y-5 pt-10 text-2xl ml-5 md:space-y-2 md:py-4 md:bg-neutral-700 md:px-8 md:rounded-lg md:mt-4">
