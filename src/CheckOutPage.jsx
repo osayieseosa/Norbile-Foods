@@ -154,12 +154,7 @@ const CheckOutPage = () => {
             </>
           )}
 
-          <div
-            className="text-slate-200 w-min"
-            onClick={() => {
-              handlePayment();
-            }}
-          >
+          <div className="text-slate-200 w-min" onClick={handlePayment}>
             <Button content="Make Payment" size="text-sm" />
           </div>
         </div>
