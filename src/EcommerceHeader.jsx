@@ -2,6 +2,7 @@ import { useEffect, useRef, useContext, useState } from "react";
 import AppContext from "./context/AppProvider";
 import { Link, Navigate } from "react-router-dom";
 import { FaArrowRight, FaTimes } from "react-icons/fa";
+import logo from "./images/logo.png";
 import Menu from "./Menu";
 import {
   FaBars,
@@ -69,7 +70,7 @@ const EcommerceHeader = () => {
             <div className="flex justify-between items-center">
               <div className=" w-24" onClick={() => navigate("/")}>
                 <img
-                  src="media/Logo.png"
+                  src={logo}
                   alt="Company logo"
                   className="w-full brightness-200 object-cover"
                 />

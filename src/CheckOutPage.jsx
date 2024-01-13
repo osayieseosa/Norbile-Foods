@@ -150,7 +150,7 @@ const CheckOutPage = () => {
               </div>
               <div className="flex justify-between">
                 <div>Total:</div>
-                <div>&#8358;total</div>
+                <div>&#8358;{total}</div>
               </div>
             </>
           )}

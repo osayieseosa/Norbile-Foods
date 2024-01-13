@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "./images/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 
 const links = [
@@ -18,11 +19,7 @@ const Footer = () => {
     <div className="bg-gray-900 pt-14 px-5 space-y-10 sm:flex-row ">
       <div className="sm:max-w-2xl sm:m-[0_auto] flex justify-between">
         <div className="cursor-pointer" onClick={() => navigate("/")}>
-          <img
-            src="media/Logo.png"
-            alt="footer logo"
-            className="w-32 brightness-200"
-          />
+          <img src={logo} alt="footer logo" className="w-32 brightness-200" />
         </div>
         <div>
           <ul className="text-center text-xs font-semibold text-neutral-200 mb-5">

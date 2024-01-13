@@ -1,6 +1,7 @@
 import React from "react";
 import EcommerceHeader from "./EcommerceHeader";
 import Footer from "./Footer";
+import about from "./images/about.webp";
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -10,8 +11,8 @@ const About = () => {
       <div className="w-full h-64">
         <img
           className="w-full h-full object-cover"
-          src="media/about.webp"
-          alt=""
+          src={about}
+          alt="About header"
         />
       </div>
       <div className="w-full px-5 py-14 max-w-[70ch] sm:m-[0_auto]">

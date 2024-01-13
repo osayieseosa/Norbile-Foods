@@ -22,7 +22,7 @@ const Menu = ({ menu, setMenu }) => {
     <div
       className={`${
         width >= 768 ? "w-full" : menu ? "w-full" : "w-0"
-      } duration-500 py-7 space-y-14 h-screen fixed overscroll-contain overflow-x-hidden z-50 bg-[#000] top-0 md:relative left-0 md:w-max md:py-0 md:h-min md:space-y-0 md:grid md:place-content-center md:bg-transparent md:overflow-visible`}
+      } duration-500 py-7 space-y-14 h-full fixed overscroll-contain overflow-x-hidden z-50 bg-[#000] top-0 md:relative left-0 md:w-max md:py-0 md:h-min md:space-y-0 md:grid md:place-content-center md:bg-transparent md:overflow-visible`}
     >
       <div
         className="text-yellow-300 relative w-full text-7xl  flex justify-end px-5 md:hidden h-min"

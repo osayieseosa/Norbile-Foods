@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, useContext } from "react";
 import { FaBars } from "react-icons/fa";
 import Carousel from "./Carousel";
 import Menu from "./Menu";
+import logo from "./images/logo.png";
 import Button from "./Button";
 import StoreCarousel from "./StoreCarousel";
 import emailjs from "emailjs-com";
@@ -57,7 +58,7 @@ const Home = () => {
             <div className="lg:max-w-4xl lg:m-[0_auto] flex justify-between items-center px-7 h-32">
               <div className="w-32">
                 <img
-                  src="media/Logo.png"
+                  src={logo}
                   alt="Company logo"
                   className="w-full brightness-200 object-cover"
                 />

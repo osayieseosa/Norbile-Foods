@@ -56,8 +56,8 @@ const Shop = () => {
                         className="w-full h-full rounded-lg"
                       />
                     </div>
-                    <div className="w-min flex flex-col pt-5 h-full px-1 place-content-center">
-                      <h1 className="text-2xl font-semibold text-neutral-900 mb-2">
+                    <div className="w-full flex flex-col pt-5 h-full px-1 place-content-center">
+                      <h1 className="text-2xl font-bold text-neutral-700 mb-2">
                         {item.name}
                       </h1>
                       <p className="text-lg font-semibold text-neutral-700">

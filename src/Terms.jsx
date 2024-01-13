@@ -1,6 +1,7 @@
 import React from "react";
 import EcommerceHeader from "./EcommerceHeader";
 import Footer from "./Footer";
+import terms from "./images/header.webp";
 
 const Terms = () => {
   return (
@@ -10,7 +11,7 @@ const Terms = () => {
         <div className="w-full h-64">
           <img
             className="w-full h-full object-cover"
-            src="media/header.webp"
+            src={terms}
             alt="terms of service header"
           />
         </div>
