@@ -3,6 +3,7 @@ import EcommerceHeader from "./EcommerceHeader";
 import axios from "./api/axios";
 import Footer from "./Footer";
 import Loader from "./Loader";
+import picture from "./images/empty-box.png";
 
 const ITEM_URL = "/food";
 const IMAGE_URL = "/upload-image";
@@ -117,7 +118,7 @@ const CreateFood = () => {
           </h1>
           <div className="w-[17rem] h-[17rem] p-5 sm:w-[24rem] sm:h-[24rem]">
             <img
-              src={image.length ? image : "/media/empty-box.png"}
+              src={image.length ? image : picture}
               alt="upload Image"
               className="w-full h-full object-cover"
             />

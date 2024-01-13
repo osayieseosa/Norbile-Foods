@@ -3,6 +3,7 @@ import EcommerceHeader from "./EcommerceHeader";
 import axios from "./api/axios";
 import Footer from "./Footer";
 import Loader from "./Loader";
+import picture from "./images/empty-box.png";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import AppContext from "./context/AppProvider";
 
@@ -126,7 +127,7 @@ const EditFood = () => {
                   ? image
                   : food?.image.name
                   ? food?.image.name
-                  : "media/empty-box.png"
+                  : picture
               }
               alt="upload Image"
               className="w-full h-full object-cover"
