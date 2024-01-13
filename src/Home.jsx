@@ -187,7 +187,7 @@ const Home = () => {
             />
             <button
               type="submit"
-              className="font-semibold py-2 px-5 bg-red-700 w-max mt-5 rounded-lg cursor-pointer hover:scale-95 duration-75"
+              className="font-semibold py-2 px-5 bg-red-700 w-max mt-5 rounded-lg cursor-pointer hover:scale-95 duration-75 block"
             >
               Ask Question
             </button>
