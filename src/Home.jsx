@@ -9,6 +9,7 @@ import emailjs from "emailjs-com";
 import AppContext from "./context/AppProvider";
 import Footer from "./Footer";
 import { Link, useNavigate } from "react-router-dom";
+import video from "./images/hero.mp4";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -92,7 +93,7 @@ const Home = () => {
           muted
           className="absolute z-10 w-auto min-w-full min-h-full brightness-50 aspect-auto object-cover"
         >
-          <source src="./media/hero.mp4" type="video/mp4" />
+          <source src={video} type="video/mp4" />
         </video>
       </div>
       <div className="w-full  bg-[#8d9ea7]">
